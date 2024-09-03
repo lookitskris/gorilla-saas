@@ -22,6 +22,9 @@ param permissionsSqlDatabaseName string
 @description('Tenant SQL Database Name')
 param tenantSqlDatabaseName string
 
+@description('App SQL Database Name')
+param appSqlDatabaseName string
+
 @description('SQL Login Password')
 @secure()
 param sqlAdministratorLoginPassword string
@@ -62,6 +65,12 @@ var appConfigStore = {
     {
       key: '${sqlKeyName}:TenantSQLConnectionString'
       value: 'Data Source=tcp:${sqlServerFQDN},1433;Initial Catalog=${tenantSqlDatabaseName};User Id=${sqlAdministratorLogin}@${sqlServerFQDN};Password=${sqlAdministratorLoginPassword};'
+      isSecret: true
+      contentType: 'text/plain'
+    }
+    {
+      key: '${sqlKeyName}:AppSQLConnectionString'
+      value: 'Data Source=tcp:${sqlServerFQDN},1433;Initial Catalog=${appSqlDatabaseName};User Id=${sqlAdministratorLogin}@${sqlServerFQDN};Password=${sqlAdministratorLoginPassword};'
       isSecret: true
       contentType: 'text/plain'
     }

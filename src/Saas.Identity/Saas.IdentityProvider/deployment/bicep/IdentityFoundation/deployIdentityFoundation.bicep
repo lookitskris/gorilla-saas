@@ -39,6 +39,7 @@ var appConfigurationName = 'appconfig-${solutionPrefix}-${solutionName}-${soluti
 var sqlServerName = 'sqldb-${solutionPrefix}-${solutionName}-${solutionPostfix}'
 var permissionsSqlDatabaseName = 'sqldb-permissions-${solutionPrefix}-${solutionName}-${solutionPostfix}'
 var tenantSqlDatabaseName = 'sqldb-tenant-${solutionPrefix}-${solutionName}-${solutionPostfix}'
+var appSqlDatabaseName = 'sqldb-app-${solutionPrefix}-${solutionName}-${solutionPostfix}'
 var userAssignedIdentityName = 'user-assign-id-${solutionPrefix}-${solutionName}-${solutionPostfix}' 
 var applicationInsightsName = 'appi-${solutionPrefix}-${solutionName}-${solutionPostfix}'
 var logAnalyticsWorkspaceName = 'log-${solutionPrefix}-${solutionName}-${solutionPostfix}'
@@ -66,6 +67,7 @@ module sqlDbsModule './Module/sqlDbs.bicep' = {
     sqlServerName: sqlServerName
     permissionsSqlDatabaseName: permissionsSqlDatabaseName
     tenantSqlDatabaseName: tenantSqlDatabaseName
+    appSqlDatabaseName: appSqlDatabaseName
     sqlAdministratorLogin: sqlAdministratorLogin
     sqlAdministratorLoginPassword: secretGenerator.outputs.secret
   }
@@ -184,6 +186,7 @@ module configurationEntriesModule './Module/addConfigEntries.bicep' = {
     sqlServerFQDN: sqlDbsModule.outputs.sqlServerFQDN
     permissionsSqlDatabaseName: permissionsSqlDatabaseName
     tenantSqlDatabaseName: tenantSqlDatabaseName
+    appSqlDatabaseName: appSqlDatabaseName
     sqlAdministratorLoginPassword: secretGenerator.outputs.secret
   }
   dependsOn: [

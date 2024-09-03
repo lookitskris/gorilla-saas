@@ -15,6 +15,9 @@ param permissionsSqlDatabaseName string
 @description('The Tenant SQL Database name.')
 param tenantSqlDatabaseName string
 
+@description('The App SQL Database name.')
+param appSqlDatabaseName string
+
 @description('The SQL Server administrator login.')
 param sqlAdministratorLogin string
 
@@ -76,6 +79,17 @@ resource tenantSqlDatabase 'Microsoft.Sql/servers/databases@2022-05-01-preview' 
     tier: 'Basic'
   }
 }
+
+resource appSqlDatabase 'Microsoft.Sql/servers/databases@2022-05-01-preview' = {
+  parent: sqlServer
+  name: appSqlDatabaseName
+  location: location
+  sku: {
+    name: 'Basic'
+    tier: 'Basic'
+  }
+}
+
 
 resource userAssignedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2022-01-31-preview' = {
   name: userAssignedIdentityName

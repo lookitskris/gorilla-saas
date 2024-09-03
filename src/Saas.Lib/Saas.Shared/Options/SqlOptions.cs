@@ -7,4 +7,5 @@ public record SqlOptions
     public string? SQLAdministratorLoginName { get; init; }
     public string? TenantSQLConnectionString { get; init; }
     public string? PermissionsSQLConnectionString { get; init; }
+    public string? AppSQLConnectionString { get; init; }
 }
