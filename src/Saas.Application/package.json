@@ -1,9 +1,9 @@
 {
-  "name": "uno-hello-world",
+  "name": "gorilla-saas-dash",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --experimental-https",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -11,7 +11,14 @@
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.4"
+    "next": "14.2.4",
+    "@azure/msal-browser": "^3.20.0",
+    "@azure/msal-react": "^2.0.22",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "11.11",
+    "@mui/icons-material": "^5.16.1",
+    "@mui/material": "^5.14.6",
+    "@styled-icons/material": "^10.47.0"
   },
   "devDependencies": {
     "typescript": "^5",
