@@ -17,7 +17,7 @@ const SidebarContainer = styled(Box)<SidebarContainerProps>(
   })
 );
 
-const SideBarHeader = styled(Box)(({ theme }) => ({
+const SideBarHeader = styled(Box)(({ theme }: { theme: any }) => ({
   display: "flex",
   background: theme.palette.primary.main,
   justifyContent: "flex-start",

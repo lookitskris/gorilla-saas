@@ -36,7 +36,7 @@ export const navigationCustomizations: Components<Theme> = {
           margin: "0 -8px",
         },
       },
-      paper: ({ theme }) => ({
+      paper: ({ theme }: { theme: any }) => ({
         marginTop: "4px",
         borderRadius: (theme.vars || theme).shape.borderRadius,
         border: `1px solid ${(theme.vars || theme).palette.divider}`,
@@ -108,7 +108,7 @@ export const navigationCustomizations: Components<Theme> = {
           },
         }),
       }),
-      select: ({ theme }) => ({
+      select: ({ theme }: { theme: any }) => ({
         display: "flex",
         alignItems: "center",
         ...theme.applyStyles("dark", {
@@ -156,7 +156,7 @@ export const navigationCustomizations: Components<Theme> = {
   },
   MuiDrawer: {
     styleOverrides: {
-      paper: ({ theme }) => ({
+      paper: ({ theme }: { theme: any }) => ({
         backgroundColor: (theme.vars || theme).palette.background.default,
       }),
     },
@@ -180,7 +180,7 @@ export const navigationCustomizations: Components<Theme> = {
   MuiTabs: {
     styleOverrides: {
       root: { minHeight: "fit-content" },
-      indicator: ({ theme }) => ({
+      indicator: ({ theme }: { theme: any }) => ({
         backgroundColor: (theme.vars || theme).palette.grey[800],
         ...theme.applyStyles("dark", {
           backgroundColor: (theme.vars || theme).palette.grey[200],
@@ -223,7 +223,7 @@ export const navigationCustomizations: Components<Theme> = {
   },
   MuiStepConnector: {
     styleOverrides: {
-      line: ({ theme }) => ({
+      line: ({ theme }: { theme: any }) => ({
         borderTop: "1px solid",
         borderColor: (theme.vars || theme).palette.divider,
         flex: 1,
@@ -275,7 +275,7 @@ export const navigationCustomizations: Components<Theme> = {
   },
   MuiStepLabel: {
     styleOverrides: {
-      label: ({ theme }) => ({
+      label: ({ theme }: { theme: any }) => ({
         "&.Mui-completed": {
           opacity: 0.6,
           ...theme.applyStyles("dark", { opacity: 0.5 }),

@@ -1,7 +1,7 @@
 "use client";
 import { Box, styled } from "@mui/material";
 
-const Container = styled(Box)(({ theme }) => ({
+const Container = styled(Box)(({ theme }: { theme: any }) => ({
   textAlign: "center",
   display: "flex",
   flexDirection: "column",

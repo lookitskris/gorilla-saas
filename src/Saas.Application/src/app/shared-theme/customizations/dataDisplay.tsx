@@ -58,12 +58,12 @@ export const dataDisplayCustomizations: Components<Theme> = {
   },
   MuiListItemText: {
     styleOverrides: {
-      primary: ({ theme }) => ({
+      primary: ({ theme }: { theme: any }) => ({
         fontSize: theme.typography.body2.fontSize,
         fontWeight: 500,
         lineHeight: theme.typography.body2.lineHeight,
       }),
-      secondary: ({ theme }) => ({
+      secondary: ({ theme }: { theme: any }) => ({
         fontSize: theme.typography.caption.fontSize,
         lineHeight: theme.typography.caption.lineHeight,
       }),
