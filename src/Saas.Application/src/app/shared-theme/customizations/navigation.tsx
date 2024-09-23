@@ -14,7 +14,7 @@ import { gray, brand } from "../themePrimitives";
 export const navigationCustomizations: Components<Theme> = {
   MuiMenuItem: {
     styleOverrides: {
-      root: ({ theme }) => ({
+      root: ({ theme }: { theme: any }) => ({
         borderRadius: (theme.vars || theme).shape.borderRadius,
         padding: "6px 8px",
         [`&.${menuItemClasses.focusVisible}`]: {
@@ -67,7 +67,7 @@ export const navigationCustomizations: Components<Theme> = {
       ),
     },
     styleOverrides: {
-      root: ({ theme }) => ({
+      root: ({ theme }: { theme: any }) => ({
         borderRadius: (theme.vars || theme).shape.borderRadius,
         border: "1px solid",
         borderColor: gray[200],
@@ -126,7 +126,7 @@ export const navigationCustomizations: Components<Theme> = {
       underline: "none",
     },
     styleOverrides: {
-      root: ({ theme }) => ({
+      root: ({ theme }: { theme: any }) => ({
         color: (theme.vars || theme).palette.text.primary,
         fontWeight: 500,
         position: "relative",
@@ -163,7 +163,7 @@ export const navigationCustomizations: Components<Theme> = {
   },
   MuiPaginationItem: {
     styleOverrides: {
-      root: ({ theme }) => ({
+      root: ({ theme }: { theme: any }) => ({
         "&.Mui-selected": {
           color: "white",
           backgroundColor: (theme.vars || theme).palette.grey[900],
@@ -190,7 +190,7 @@ export const navigationCustomizations: Components<Theme> = {
   },
   MuiTab: {
     styleOverrides: {
-      root: ({ theme }) => ({
+      root: ({ theme }: { theme: any }) => ({
         padding: "6px 8px",
         marginBottom: "8px",
         textTransform: "none",
@@ -233,7 +233,7 @@ export const navigationCustomizations: Components<Theme> = {
   },
   MuiStepIcon: {
     styleOverrides: {
-      root: ({ theme }) => ({
+      root: ({ theme }: { theme: any }) => ({
         color: "transparent",
         border: `1px solid ${gray[400]}`,
         width: 12,
