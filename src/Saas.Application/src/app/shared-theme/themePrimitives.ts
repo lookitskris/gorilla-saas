@@ -404,6 +404,7 @@ export const shape = {
 
 // @ts-ignore
 const defaultShadows: Shadows = [
+  // @ts-expect-error
   "var(--mui-palette-baseShadow)",
   ...defaultTheme.shadows.slice(1),
 ];
