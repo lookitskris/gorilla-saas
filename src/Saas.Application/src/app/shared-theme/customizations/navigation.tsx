@@ -78,10 +78,10 @@ export const navigationCustomizations: Components<Theme> = {
           backgroundColor: (theme.vars || theme).palette.background.paper,
           boxShadow: "none",
         },
-        [`&.${selectClasses.focused}`]: {
-          outlineOffset: 0,
-          borderColor: gray[400],
-        },
+        // [`&.${selectClasses.focused}`]: {
+        //   outlineOffset: 0,
+        //   borderColor: gray[400],
+        // },
         "&:before, &:after": {
           display: "none",
         },
@@ -99,10 +99,10 @@ export const navigationCustomizations: Components<Theme> = {
             backgroundColor: (theme.vars || theme).palette.background.paper,
             boxShadow: "none",
           },
-          [`&.${selectClasses.focused}`]: {
-            outlineOffset: 0,
-            borderColor: gray[900],
-          },
+          // [`&.${selectClasses.focused}`]: {
+          //   outlineOffset: 0,
+          //   borderColor: gray[900],
+          // },
           "&:before, &:after": {
             display: "none",
           },
