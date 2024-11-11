@@ -7,8 +7,8 @@ import InitColorSchemeScript from "@mui/material/InitColorSchemeScript";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Uno Platform",
-  description: "Uno Platform",
+  title: "Gorilla Platform",
+  description: "Gorilla Saas Platform Dash",
 };
 
 export default function RootLayout({

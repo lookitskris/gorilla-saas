@@ -71,10 +71,11 @@ export default function SideMenu() {
             variant="body2"
             sx={{ fontWeight: 500, lineHeight: "16px" }}
           >
-            {user?.idTokenClaims?.given_name} {user?.idTokenClaims?.family_name}
+            {user?.idTokenClaims?.given_name as string}{" "}
+            {user?.idTokenClaims?.family_name as string}
           </Typography>
           <Typography variant="caption" sx={{ color: "text.secondary" }}>
-            {user?.idTokenClaims?.email}
+            {user?.idTokenClaims?.email as string}
           </Typography>
         </Box>
         <OptionsMenu />
